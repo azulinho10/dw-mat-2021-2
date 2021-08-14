@@ -51,15 +51,27 @@
         // Usando JSX com interpolação de variáceis 
         const div2 = <div className={className}>{children}</div>
         
-        const div3 = <div {...props}> </div>
-        const container = React.createElement('div', null, [
-            novaDiv, div2, div3
-        ])
+        //Usando JSX com interpolação e espalhamento
+     
+        const div3 = <div {...props}></div>
         
-        const container =
+        /*const container = React.createElement('div', null, [
+            novaDiv, div2, div3
+        ])*/
+        
+        /*const container =
           <div>
-            {novaDiv},{div2},{div3}
-          </div>  
+            {novaDiv}
+            {div2}
+            {div3}
+          </div>*/
+          
+          const container =
+          <div>
+            <div className="formata">Div React com Babel</div>
+            <div className={className}>{children}</div>
+            <div {...props}></div>
+         </div>   
 
          ReactDOM.render(container, document.getElementById('root'))   
     </script>
