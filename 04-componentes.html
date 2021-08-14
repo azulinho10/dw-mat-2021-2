@@ -17,7 +17,16 @@
             margin-bottom: 18px;
         }
 
-        
+        .greet {
+            background-color: indigo;
+            border-radius: 8px;
+            color: white;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0.25);
+            padding: 12px;
+            text-align: center;
+            font-family: "Calibri", Arial, sans-serif;
+            margin-bottom: 18px;
+        }
     </style>
 </head>
 
@@ -35,7 +44,12 @@
         /*function Message(props) {
             return <div className='msg' {...props}></div>
         }*/
+
+        // Arrow-function de componente
         const Message = props => <div className='msg' {...props}></div>
+
+        // Arrow function de componente com props personalizadas
+        const Greeting = ({name, msg}) => <div className="greet">{msg}, {name}!</div>
 
         // Usando a função para criar um novo elemento personalizado
         const mensagem1 = Message({ children: 'Olá, componente', id: 'msg1' })
@@ -46,6 +60,7 @@
                 {Message({ children: 'Segunda mensagem', id: 'msg2'})}
                 {/* No terceiro caso, usamos a função que retorna um elemento pronto como um componente. Componente é uma função que retorna um elemento pronto, e na hora de usar, usamos com uma tag*/}
                 <Message id="msg3"> Terceira mensagem </Message>
+                <Greeting name="Fausto" msg="Bom dia" />
             </div>
 
         ReactDOM.render(container, document.getElementById('root'))
