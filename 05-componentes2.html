@@ -46,6 +46,12 @@
          {/* Valores numéricos em props devem ser passados entre chaves */} 
             <Soma n1={14} n2={20} id="soma1" title="Soma de 14 com 20" />
 
+            {
+                /*
+                Quando uma tag é "solteira" (isto é, não tem tag de fechamento) ela OBRIGATORIAMENTE deve terminar com />
+                 */
+            }
+
             {/* A prop "children" pode ser usada como "recheio" da tag ou como uma prop comum */}
             <ParagCenter id="p1">Texto centralizado</ParagCenter>
             <ParagCenter id="p2" children="Outro texto personalizado" />
